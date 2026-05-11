@@ -4,8 +4,8 @@ let ctx = canvas.getContext("2d");
 const VELOCIDAD = 15;
 
 // Objetos del juego
-let gato = { x: 300, y: 200, w: 50, h: 50 };
-let raton = { x: 100, y: 100, w: 20, h: 20 };
+let gato = { x: 400, y: 100, w: 70, h: 60 };
+let raton = { x: 100, y: 100, w: 60, h: 30 };
 
 // Estado
 let puntos = 0;
@@ -37,10 +37,10 @@ function dibujarTodo() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // Gato grande negro
-  dibujarRect(gato.x, gato.y, gato.w, gato.h, "black");
+  dibujarRect(gato.x, gato.y, gato.w, gato.h, "red");
 
   // Ratón pequeño anaranjado
-  dibujarRect(raton.x, raton.y, raton.w, raton.h, "orange");
+  dibujarRect(raton.x, raton.y, raton.w, raton.h, "green");
 }
 
 // Detectar colisión
@@ -128,7 +128,7 @@ let timer = setInterval(function() {
     juegoActivo = false;
     clearInterval(timer);
     document.getElementById("mensaje").innerText =
-      "⏰ Fin del juego. Puntaje final: " + puntos;
+      "⏰ Game over. Puntaje final: " + puntos;
   }
 }, 1000);
 
@@ -141,3 +141,8 @@ mostrarEnSpan("tiempo", tiempo);
 
 // Iniciar juego
 dibujarTodo();
+
+function desaparecerPersonaje() {
+   ctx.clearRect(gato.x, gato.y, gato.w, gato.h)
+
+}
