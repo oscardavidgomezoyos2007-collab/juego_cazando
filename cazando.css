@@ -1,42 +1,125 @@
 body {
-  text-align: center;
-  font-family: Arial, sans-serif;
-  background: #f0f0f0;
+
   margin: 0;
-  padding: 20px;
+  padding: 0;
+
+  font-family: Arial, sans-serif;
+
+  background: linear-gradient(to bottom, #1e1e2f, #3b3b5c);
+
+  color: white;
+
+  text-align: center;
 }
+
+/* TITULO */
 
 h1 {
-  margin-bottom: 5px;
+
+  margin-top: 20px;
+
+  font-size: 45px;
+
+  color: #ffd700;
+
+  text-shadow: 3px 3px 5px black;
 }
+
+p {
+
+  font-size: 18px;
+}
+
+/* PANEL */
 
 .panel {
-  margin: 15px 0;
-  font-size: 18px;
+
+  margin: 20px auto;
+
+  width: 300px;
+
   display: flex;
-  justify-content: center;
-  gap: 30px;
+
+  justify-content: space-around;
+
+  background: rgba(255,255,255,0.1);
+
+  padding: 15px;
+
+  border-radius: 15px;
+
+  box-shadow: 0 0 10px black;
+
+  font-size: 22px;
+
+  font-weight: bold;
 }
+
+/* CANVAS */
 
 canvas {
-  background: white;
-  border: 2px solid black;
+
+  background: #ffffff;
+
+  border: 5px solid #ffd700;
+
+  border-radius: 20px;
+
+  box-shadow: 0 0 20px black;
+
+  margin-top: 15px;
 }
 
+/* CONTROLES */
+
 .controles {
+
   margin-top: 20px;
 }
 
+/* BOTONES */
+
 button {
+
+  background: #ffd700;
+
+  color: black;
+
+  border: none;
+
+  padding: 15px 20px;
+
   margin: 5px;
-  padding: 10px 16px;
-  font-size: 18px;
+
+  border-radius: 12px;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
   cursor: pointer;
+
+  transition: 0.3s;
 }
 
+button:hover {
+
+  background: #ff9900;
+
+  transform: scale(1.1);
+}
+
+/* MENSAJE */
+
 #mensaje {
-  font-size: 20px;
+
+  margin-top: 20px;
+
+  font-size: 28px;
+
   font-weight: bold;
-  color: darkred;
-  margin-top: 15px;
+
+  color: #00ffcc;
+
+  text-shadow: 2px 2px 5px black;
 }

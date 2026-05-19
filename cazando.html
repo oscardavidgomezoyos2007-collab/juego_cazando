@@ -1,48 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Juego Cazando</title>
+
   <link rel="stylesheet" href="cazando.css">
+
 </head>
 
 <body>
 
-  <h1>Juego Cazando</h1>
-  <p>Autor: Oscar Gomez</p>
+  <div class="contenedor">
 
-  <canvas id="Juego" width="600" height="400"></canvas>
+    <h1>🐱 Juego Cazando 🐭</h1>
 
-  <div class="controles">
+    <p class="subtitulo">
+      Atrapa la comida antes de que se acabe el tiempo ⏰
+    </p>
 
-    <button id="btnArriba">⬆</button>
-    <br>
+    <!-- PANEL -->
 
-    <button id="btnIzquierda">⬅</button>
+    <div class="panel">
 
-    <button id="btnAbajo">⬇</button>
+      <div class="card">
+        ⭐ Puntos:
+        <span id="puntos">0</span>
+      </div>
 
-    <button id="btnDerecha">➡</button>
+      <div class="card">
+        ⏰ Tiempo:
+        <span id="tiempo">10</span>
+      </div>
 
-    <button onclick="reiniciarJuego()">🔄 Reiniciar</button>
+    </div>
+
+    <!-- CANVAS -->
+
+    <canvas id="Juego" width="600" height="400"></canvas>
+
+    <!-- CONTROLES -->
+
+    <div class="controles">
+
+      <button id="btnArriba">⬆</button>
+
+      <div>
+
+        <button id="btnIzquierda">⬅</button>
+
+        <button id="btnAbajo">⬇</button>
+
+        <button id="btnDerecha">➡</button>
+
+      </div>
+
+      <button class="reiniciar" onclick="reiniciarJuego()">
+        🔄 Reiniciar
+      </button>
+
+    </div>
+
+    <p id="mensaje"></p>
 
   </div>
-
-  <div class="panel">
-
-    <span>Puntos:
-      <span id="puntos">0</span>
-    </span>
-
-    <br><br>
-
-    <span>Tiempo:
-      <span id="tiempo">10</span>
-    </span>
-
-  </div>
-
-  <p id="mensaje"></p>
 
   <script src="cazando.js"></script>
 
